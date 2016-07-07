@@ -14,6 +14,7 @@ class CreateKerusakanTable extends Migration
             $table->integer('divisi_id')->unsigned();
             $table->integer('progress')->unsigned();
             $table->text('keterangan');
+            $table->string('image');
             $table->integer('user_id')->unsigned();
             $table->timestamps();
 

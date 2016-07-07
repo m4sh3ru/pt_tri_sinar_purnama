@@ -22,7 +22,7 @@
 		</p>
 		<p>
 			<label>Level</label>
-			{!! Form::select('level_user',[''=>"Level Pengguna", 1=>'Administrator', 2 => "Manager IT", 3 => "Staf"], '', ['class'=>'form-control input-sm'], 'required') !!}
+			{!! Form::select('level_user',[''=>"Level Pengguna", 1=>'Administrator', 2 => "Manager IT"], '', ['class'=>'form-control input-sm'], 'required') !!}
 		</p>
 		<hr>
 		<p>

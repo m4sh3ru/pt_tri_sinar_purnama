@@ -26,7 +26,7 @@ class PerbaikanController extends Controller
         {
             $start = $req->input('start_date');
             $end =$req->input('end_date');
-            $q = Perbaikan::whereBetween('created_at',[date('Y-m-d 23:59:59',strtotime($start)), date('Y-m-d 23:59:59',strtotime($end))])->orderBy('id', 'DESC')->paginate(15);
+            $q = Perbaikan::whereBetween('created_at',[date('Y-m-d 00:00:00',strtotime($start)), date('Y-m-d 23:59:59',strtotime($end))])->orderBy('id', 'DESC')->paginate(15);
 
         }else{
             $q = Perbaikan::where('id', '>',0)->orderBy('id', 'DESC')->paginate(15);

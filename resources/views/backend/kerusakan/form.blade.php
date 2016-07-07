@@ -4,7 +4,7 @@
 	@if(isset($q))
 		{!! Form::model($q, ['files' => true, 'method' => 'PUT', 'route' => ['admin.laporan.kerusakan.update', $q->id],'class'=>'form-horizontal']) !!}
 	@else
-		{!! Form::open(['route'=>'admin.laporan.kerusakan.store', 'class'=>'form-horizontal']) !!}
+		{!! Form::open(['route'=>'admin.laporan.kerusakan.store', 'files'=>true, 'class'=>'form-horizontal']) !!}
 	@endif
 		<p>
 			<label>Jenis Perangkat IT</label>

@@ -33,7 +33,7 @@
 		</p>
 		<p>
 			<label>Divisi</label>
-			<select class="form-control input-sm" name="divisi_id">
+			<select class="form-control input-sm" name="divisi_id" required>
 				<option value="">Pilih Divisi :</option>
 				@foreach($div as $r)
 				<option value="{!! $r->id !!}"@if(isset($q)) @if($r->id == $q->divisi_id) {!! 'selected' !!} @endif @endif>{!! ucwords($r->nama) !!}</option>

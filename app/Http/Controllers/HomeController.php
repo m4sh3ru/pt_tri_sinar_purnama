@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.index');
+        return view('backend.index')->with('attr', 'Dashboard');
     }
 
     public function login()

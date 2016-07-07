@@ -7,7 +7,7 @@ use App\Models\User;
 use App\Http\Requests;
 use App\Http\Requests\User\UserRegistrationRequest;
 use App\Http\Controllers\Controller;
-use Session, Helper, Auth;
+use Session, Helper, Auth, Validator;
 
 class UserController extends Controller
 {
@@ -54,6 +54,32 @@ class UserController extends Controller
         $user_ = 'class=active';
         $vars = ['q', 'user_', 'attr'];
         return view($this->base_view.'edit', compact($vars));
+    }
+
+    public function change_password(){
+        $q = User::findOrFail(Auth::Id());
+        $attr = 'Ubah Kata Sandi';
+        $user_ = 'class=active';
+        $vars = ['q', 'user_', 'attr'];
+        return view($this->base_view.'action.ubah_sandi', compact($vars));
+    }
+
+    public function auth_change_password(Request $request){
+        $rule = [
+             'password'=>'required|min:4|same:password2',
+        ];
+        $validator = Validator::make($request->all(), $rule);
+        if($validator->fails())
+        {
+           return redirect()->route('admin.user.index')->withErrors();
+        }
+        $data = [
+                'password' => bcrypt($request->password),
+        ];
+        User::whereId(Auth::Id())->update($data);
+        $msg = Helper::notif('sukses','Perubahan kata sandi akun anda berhasil disimpan');
+        Session::flash('notif', $msg);
+        return redirect()->route('dashboard');
     }
 
    

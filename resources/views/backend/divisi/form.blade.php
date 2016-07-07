@@ -6,7 +6,7 @@
 	@endif
 		<p>
 			<label>Nama Satuan Kerja / Divisi</label>
-			{!! Form::text('nama',null, ['class'=>'form-control input-sm', 'placeholder'=>'Nama Satuan Kerja/DivisiController'],'required') !!}
+			{!! Form::text('nama',null, ['class'=>'form-control input-sm', 'placeholder'=>'Nama Satuan Kerja/DivisiController', 'autofocus'],'required') !!}
 			<span id="helpBlock" class="help-block"><em>Pastikan nama divisi/satuan kerja ingin ditambahkan sama dengan yang sudah terekam di sistem.</em></span>
 		</p>
 		<hr>

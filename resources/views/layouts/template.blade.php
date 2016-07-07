@@ -25,13 +25,7 @@
 					@if(Auth::check())
 					<ul class="user-menu">
 						<li class="pull-right"><a href="{!! route('logout') !!}">Logout <span class="fa fa-sign-out"></span></a></li>
-						<li class="dropdown pull-right">
-							<ul class="dropdown-menu" role="menu">
-								<li><a href=""><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-								<li class="divider"></li>
-								<li><a href="">Logout <span class="fa fa-sign-out"></span></a></li>
-							</ul>
-						</li>
+						<li class="pull-right"><a href="{!! route('ubahSandi') !!}"><span class="fa fa-cogs"></span> Ubah Kata Sandi</a></li>
 
 					</ul>
 					@endif

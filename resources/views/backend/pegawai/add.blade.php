@@ -3,9 +3,7 @@
 @section('info')
 	<div class="row">
 		<div class="col-md-12">
-			<div class="alert alert-info">
-				<p>Pastikan Data Pegawai yang dimasukkan benar-benar sesuai dan dapat dipertangungjawabkan!</p>
-			</div>
+			<p class="alert alert-info"><span class="fa fa-triangle-exclamation"></span> <strong>Perhatian!</strong> Menambahkan data pegawai akan otomatis meng-generate akun pegawai ybs. dengan asumsi username = <strong>nik</strong> dan password default = <strong>1234</strong></p>
 		</div>
 	</div>
 @endsection
